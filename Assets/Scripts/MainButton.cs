@@ -10,6 +10,11 @@ public class MainButton : MonoBehaviour
     void Start()
     {
         gm = FindAnyObjectByType<GameManager>();
+
+        if (gm == null)
+        {
+            Debug.Log("No se encontró el object manager");
+        }
     }
 
     public void sumarPuntos()
