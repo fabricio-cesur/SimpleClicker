@@ -17,6 +17,6 @@ public class MainButton : MonoBehaviour
         puntos = (int) Math.Ceiling(puntos + suma);
 
         muestraPuntos.text = "Puntos: " + puntos;
-        gm.setPuntos = puntos;
+        gm.setPuntos(puntos);
     }
 }
