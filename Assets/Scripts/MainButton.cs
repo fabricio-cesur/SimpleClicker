@@ -1,25 +1,22 @@
 using UnityEngine;
 using TMPro;
+using System;
 
 public class MainButton : MonoBehaviour
 {
-    private int puntos;
-    public TextMeshProUGUI txt;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public GameManager gm;
+    public TextMeshProUGUI muestraPuntos;
 
-    // Update is called once per frame
-    void Update()
+    public void sumarPuntos()
     {
-        
-    }
+        int puntos = gm.getPuntos();
+        float suma = gm.getSuma();
+        float multiplicador = gm.getMultiplicador();
 
-    public void SumarPuntos()
-    {
-        puntos++;
-        txt.text = "Puntos: " + puntos;
+        suma = suma * multiplicador;
+        puntos = (int) Math.Ceiling(puntos + suma);
+
+        muestraPuntos.text = "Puntos: " + puntos;
+        gm.setPuntos = puntos;
     }
 }
