@@ -373,7 +373,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.53240746, y: 0.5}
-  m_AnchoredPosition: {x: 15.879639, y: -177}
+  m_AnchoredPosition: {x: 0, y: -177}
   m_SizeDelta: {x: 450.9718, y: 97.3533}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &554549649
@@ -634,7 +634,6 @@ GameObject:
   - component: {fileID: 769589132}
   - component: {fileID: 769589131}
   - component: {fileID: 769589130}
-  - component: {fileID: 769589129}
   m_Layer: 5
   m_Name: BotonMultiplicador
   m_TagString: Untagged
@@ -661,20 +660,6 @@ RectTransform:
   m_AnchoredPosition: {x: 325, y: 615.605}
   m_SizeDelta: {x: 227.39, y: 230.48}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &769589129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 769589127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e66ea6e6146fcb418e05d73a68c7edc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gm: {fileID: 0}
-  muestraPuntos: {fileID: 0}
 --- !u!114 &769589130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -803,7 +788,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.53240746, y: 0.5}
-  m_AnchoredPosition: {x: -307.12033, y: 427}
+  m_AnchoredPosition: {x: -324.92, y: 413}
   m_SizeDelta: {x: 450.9718, y: 97.3533}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &795691325
@@ -917,6 +902,7 @@ GameObject:
   - component: {fileID: 1000531036}
   - component: {fileID: 1000531035}
   - component: {fileID: 1000531034}
+  - component: {fileID: 1000531037}
   m_Layer: 5
   m_Name: BotonPrincipal
   m_TagString: Untagged
@@ -987,8 +973,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1061285269}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1000531037}
+        m_TargetAssemblyTypeName: MainButton, Assembly-CSharp
         m_MethodName: sumarPuntos
         m_Mode: 1
         m_Arguments:
@@ -1037,6 +1023,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000531032}
   m_CullTransparentMesh: 1
+--- !u!114 &1000531037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000531032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e66ea6e6146fcb418e05d73a68c7edc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 1061285269}
+  muestraPuntos: {fileID: 554549649}
 --- !u!1 &1051864762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,7 +1289,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.53240746, y: 0.5}
-  m_AnchoredPosition: {x: 311.26965, y: 427}
+  m_AnchoredPosition: {x: 323.38, y: 413}
   m_SizeDelta: {x: 450.9718, y: 97.3533}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1372034614
