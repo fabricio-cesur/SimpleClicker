@@ -15,31 +15,5 @@ public class GameManager : MonoBehaviour
     public void setPuntos(int puntos) { this.puntos = puntos; }
     public void setSuma(float suma) { this.suma = suma; }
     public void setMultiplicador(float multiplicador) { this.multiplicador = multiplicador; }
-
-
-    /*
-    public void aplicarMultiplicador()
-    {
-        if (!multiplicadorActivo)
-        {
-            multiplicadorActivo = true;
-            multiplicador = 2;
-            StartCoroutine(timerMultiplicador());
-        }
-        else
-        {
-            Debug.Log("El multiplicador ya está activo");
-        }
-    }
-    */
-
-    /*
-    public IEnumerator timerMultiplicador()
-    {
-        yield return new WaitForSeconds(5);
-        multiplicador = 1;
-        multiplicadorActivo = false;
-    }
-    */
     
 }
