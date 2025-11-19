@@ -16,28 +16,6 @@ public class GameManager : MonoBehaviour
     public void setSuma(float suma) { this.suma = suma; }
     public void setMultiplicador(float multiplicador) { this.multiplicador = multiplicador; }
 
-    /*
-    public void sumarPuntos()
-    {
-        puntos = puntos + (sumaBase * multiplicador);
-        muestraPuntos.text = "Puntos: " + puntos;
-    }
-    */
-
-    /*
-    public void aumentarSuma()
-    {
-        if (puntos >= 30)
-        {
-            puntos = puntos - 30;
-            sumaBase++;
-        }
-        else
-        {
-            Debug.Log("No tienes puntos suficientes");
-        }
-    }
-    */
 
     /*
     public void aplicarMultiplicador()
