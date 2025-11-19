@@ -4,12 +4,10 @@ using System.Collections;
 public class MultiplierButton : MonoBehaviour
 {
     public GameManager gm;
-    private bool multiplicadorActivado = false;
-    public float aumento_multiplicador = 0.5f;
+    private bool multiplicador_activo = false;
+    public float aumento_multiplicador = 1f;
 
-    
-
-    public float aumento_aumento = 0.5f;
+    public int segundos_multiplicador = 5;
 
     void Start()
     {
@@ -24,9 +22,9 @@ public class MultiplierButton : MonoBehaviour
     public void aplicarMultiplicador()
     {
         float multiplicador;
-        if (!multiplicadorActivado)
+        if (!multiplicador_activo)
         {
-            multiplicadorActivado = true;
+            multiplicador_activo = true;
             multiplicador = gm.getMultiplicador();
             gm.setMultiplicador(multiplicador + aumento_multiplicador);
             StartCoroutine(timerMultiplicador());
@@ -39,9 +37,9 @@ public class MultiplierButton : MonoBehaviour
 
     public IEnumerator timerMultiplicador()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(segundos_multiplicador);
         gm.setMultiplicador(1);
-        multiplicadorActivado = false;
+        multiplicador_activo = false;
     }
 
 }
