@@ -25,7 +25,7 @@ public class IncreaseButton : MonoBehaviour
     public void aumentarSuma()
     {
         int puntos = gm.getPuntos();
-        int suma = gm.getSuma();
+        float suma = gm.getSuma();
 
         if (puntos >= coste) {
             suma += aumento;
