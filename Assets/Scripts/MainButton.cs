@@ -26,7 +26,12 @@ public class MainButton : MonoBehaviour
         suma = suma * multiplicador;
         puntos = (int) Math.Ceiling(puntos + suma);
 
-        muestraPuntos.text = "Puntos: " + puntos;
         gm.setPuntos(puntos);
+        actualizarPuntos(puntos);
+    }
+
+    public void actualizarPuntos(int puntos)
+    {
+        muestraPuntos.text = "Puntos: " + puntos;
     }
 }

@@ -4,6 +4,8 @@ public class IncreaseButton : MonoBehaviour
 {
 
     public GameManager gm;
+
+    public MainButton mb;
     [Header("Valores")]
     // la cantidad en la que aumentará la suma
     public int aumento = 1;
@@ -15,10 +17,15 @@ public class IncreaseButton : MonoBehaviour
     void Start()
     {
         gm = FindAnyObjectByType<GameManager>();
-        
         if (gm == null)
         {
-            Debug.LogError("No se encontró el object manager, arrástrelo manualmente");
+            Debug.LogError("No se encontró el GameManager, arrástrelo manualmente");
+        }
+
+        mb = FindAnyObjectByType<MainButton>();
+        if (mb == null)
+        {
+            Debug.LogError("No se encontró el MainButton, arrástrelo manualmente");
         }
     }
 
@@ -36,6 +43,7 @@ public class IncreaseButton : MonoBehaviour
             
             aumento += aumento_aumento;
             coste += coste_aumento;
+            mb.actualizarPuntos(puntos);
         } else {
             Debug.LogError("No tiene suficientes puntos");
         }
