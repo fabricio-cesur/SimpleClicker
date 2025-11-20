@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class IncreaseButton : MonoBehaviour
 {
@@ -6,13 +7,17 @@ public class IncreaseButton : MonoBehaviour
     public GameManager gm;
 
     public MainButton mb;
+    public TextMeshProUGUI muestraSuma;
+    public TextMeshProUGUI muestraCoste;
     [Header("Valores")]
     // la cantidad en la que aumentará la suma
     public int aumento = 1;
     public int coste = 10;
     [Header("Aumento de Valores")]
     public int aumento_aumento = 1;
+    public int aumento_aumento = 1;
     public int coste_aumento = 10;
+    public float multiplicador_coste = 1.5f;
     
     void Start()
     {
@@ -27,6 +32,17 @@ public class IncreaseButton : MonoBehaviour
         {
             Debug.LogError("No se encontró el MainButton, arrástrelo manualmente");
         }
+
+        muestraSuma = GameObject.Find("SumaTexto").GetComponent<TextMeshProUGUI>();
+        muestraCoste = GameObject.Find("CosteTexto").GetComponent<TextMeshProUGUI>();
+
+        if (muestraSuma == null || muestraCoste == null)
+        {
+            Debug.LogError("No se encontró el TextMeshProUGUI de Suma o Coste, arrástrelo manualmente");
+        }
+
+        mostrarCoste(coste);
+        mostrarSuma(aumento);
     }
 
     public void aumentarSuma()
@@ -42,11 +58,24 @@ public class IncreaseButton : MonoBehaviour
             gm.setPuntos(puntos);
             
             aumento += aumento_aumento;
-            coste += coste_aumento;
+            // coste += coste_aumento; // Cambio a crecimiento exponencial
+            coste = (int)(coste * multiplicador_coste);
+            mostrarCoste(coste);
+            mostrarSuma(suma);
             mb.actualizarPuntos(puntos);
         } else {
-            Debug.LogError("No tiene suficientes puntos");
+            Debug.Log("No tiene suficientes puntos");
         }
 
+    }
+
+    public void mostrarSuma(float suma)
+    {
+        muestraSuma.text = "Suma: " + suma;
+    }
+
+    public void mostrarCoste(int coste)
+    {
+        muestraCoste.text = "Coste: " + coste;
     }
 }
