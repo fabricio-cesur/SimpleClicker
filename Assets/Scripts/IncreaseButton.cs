@@ -15,8 +15,6 @@ public class IncreaseButton : MonoBehaviour
     public int coste = 10;
     [Header("Aumento de Valores")]
     public int aumento_aumento = 1;
-    public int aumento_aumento = 1;
-    public int coste_aumento = 10;
     public float multiplicador_coste = 1.5f;
     
     void Start()
@@ -34,7 +32,7 @@ public class IncreaseButton : MonoBehaviour
         }
 
         muestraSuma = GameObject.Find("SumaTexto").GetComponent<TextMeshProUGUI>();
-        muestraCoste = GameObject.Find("CosteTexto").GetComponent<TextMeshProUGUI>();
+        muestraCoste = GameObject.Find("CosteSumaTexto").GetComponent<TextMeshProUGUI>();
 
         if (muestraSuma == null || muestraCoste == null)
         {
@@ -58,7 +56,7 @@ public class IncreaseButton : MonoBehaviour
             gm.setPuntos(puntos);
             
             aumento += aumento_aumento;
-            // coste += coste_aumento; // Cambio a crecimiento exponencial
+            // crecimiento exponencial
             coste = (int)(coste * multiplicador_coste);
             mostrarCoste(coste);
             mostrarSuma(suma);
