@@ -184,6 +184,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1191868020}
     m_Modifications:
+    - target: {fileID: 970554958434415169, guid: c2cdf6594f487e149968d3c7b228dac9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 709754382}
+    - target: {fileID: 970554958434415169, guid: c2cdf6594f487e149968d3c7b228dac9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: cambiarJuego
+      objectReference: {fileID: 0}
     - target: {fileID: 3702983960926156093, guid: c2cdf6594f487e149968d3c7b228dac9, type: 3}
       propertyPath: m_Type
       value: 0
@@ -280,7 +288,8 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 500
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 186224807477302795, guid: c2cdf6594f487e149968d3c7b228dac9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -430,6 +439,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74da3538fb6bfd045a05690a240f4983, type: 3}
+--- !u!114 &709754382 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9210547161533453512, guid: 74da3538fb6bfd045a05690a240f4983, type: 3}
+  m_PrefabInstance: {fileID: 709754381}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5b8b540d187374f9edf9a4b1dbc23d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &952384770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -522,6 +542,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2601577929435263737, guid: 2e6d46c685cc59c4d995bb6e4a455a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 709754382}
+    - target: {fileID: 2601577929435263737, guid: 2e6d46c685cc59c4d995bb6e4a455a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: salirDelJuego
+      objectReference: {fileID: 0}
     - target: {fileID: 3356661379908982647, guid: 2e6d46c685cc59c4d995bb6e4a455a10, type: 3}
       propertyPath: m_Type
       value: 0
@@ -534,7 +562,8 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 500
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4844222805046174779, guid: 2e6d46c685cc59c4d995bb6e4a455a10, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1819526107248778068}
   - component: {fileID: 6191549738227262985}
   - component: {fileID: 6873378432633373575}
-  - component: {fileID: 4054276413552989509}
   m_Layer: 5
   m_Name: BotonVolver
   m_TagString: Untagged
@@ -133,20 +132,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4054276413552989509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3172859993498398280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c5b8b540d187374f9edf9a4b1dbc23d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  escenaJuego: 
-  escenaMenu: 
 --- !u!1 &8505013052335033304
 GameObject:
   m_ObjectHideFlags: 0

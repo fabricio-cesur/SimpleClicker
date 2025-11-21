@@ -16,7 +16,7 @@ public class IncreaseButton : MonoBehaviour
     [Header("Aumento de Valores")]
     public int aumento_aumento = 1;
     public float multiplicador_coste = 1.5f;
-    
+
     void Start()
     {
         gm = FindAnyObjectByType<GameManager>();
@@ -48,20 +48,23 @@ public class IncreaseButton : MonoBehaviour
         int puntos = gm.getPuntos();
         float suma = gm.getSuma();
 
-        if (puntos >= coste) {
+        if (puntos >= coste)
+        {
             suma += aumento;
             gm.setSuma(suma);
-            
+
             puntos -= coste;
             gm.setPuntos(puntos);
-            
+
             aumento += aumento_aumento;
             // crecimiento exponencial
             coste = (int)(coste * multiplicador_coste);
             mostrarCoste(coste);
             mostrarSuma(suma);
             mb.actualizarPuntos(puntos);
-        } else {
+        }
+        else
+        {
             Debug.Log("No tiene suficientes puntos");
         }
 
@@ -69,11 +72,11 @@ public class IncreaseButton : MonoBehaviour
 
     public void mostrarSuma(float suma)
     {
-        muestraSuma.text = "Suma: " + suma;
+        muestraSuma.text = suma.ToString();
     }
 
     public void mostrarCoste(int coste)
     {
-        muestraCoste.text = "Coste: " + coste;
+        muestraCoste.text = coste.ToString();
     }
 }
