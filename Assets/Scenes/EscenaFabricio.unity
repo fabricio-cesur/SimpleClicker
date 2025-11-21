@@ -533,8 +533,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5b8b540d187374f9edf9a4b1dbc23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escenaJuego: 
-  escenaMenu: 
+  escenaJuego: EscenaFabricio
+  escenaMenu: MenuFabricio
 --- !u!4 &2147059335
 Transform:
   m_ObjectHideFlags: 0
@@ -764,6 +764,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2147059334}
+    - target: {fileID: 6873378432633373575, guid: b398039fcb50f3942b2e49fd1850ecef, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: cambiarMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 7285259003188527669, guid: b398039fcb50f3942b2e49fd1850ecef, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

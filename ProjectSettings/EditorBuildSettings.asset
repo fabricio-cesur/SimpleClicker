@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EscenaMenu.unity
     guid: 0dde1b61c05204640bb754ee9308e50e
+  - enabled: 1
+    path: Assets/Scenes/MenuFabricio.unity
+    guid: c109ef47030b1054383622fdddfbfd98
+  - enabled: 1
+    path: Assets/Scenes/EscenaFabricio.unity
+    guid: 8f9df933ee4143d4c871bb311feef781
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
