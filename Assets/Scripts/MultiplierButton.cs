@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using TMPro;
 using System;
+using UnityEngine.UI;
 
 public class MultiplierButton : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class MultiplierButton : MonoBehaviour
     public float multiplicador_coste_multiplicador = 5f;
 
     public int segundos_multiplicador = 5;
+
+    private Button miBoton;
 
     void Start()
     {
@@ -36,6 +39,8 @@ public class MultiplierButton : MonoBehaviour
         {
             Debug.LogError("No se encontró el TextMeshProUGUI de Coste Multiplicador, arrastrarlo manualmente.");
         }
+
+        miBoton = GetComponent<Button>();
     }
 
     public void aplicarMultiplicador()
@@ -51,6 +56,8 @@ public class MultiplierButton : MonoBehaviour
                 mb.actualizarPuntos(puntos);
 
                 multiplicador_activo = true;
+                if (miBoton != null) miBoton.interactable = false;
+
                 multiplicador = gm.getMultiplicador();
                 gm.setMultiplicador(multiplicador + aumento_multiplicador);
                 StartCoroutine(timerMultiplicador());
@@ -74,6 +81,7 @@ public class MultiplierButton : MonoBehaviour
         yield return new WaitForSeconds(segundos_multiplicador);
         gm.setMultiplicador(1);
         multiplicador_activo = false;
+        if (miBoton != null) miBoton.interactable = true;
     }
 
     public void mostrarCosteMultiplicador(int coste)
