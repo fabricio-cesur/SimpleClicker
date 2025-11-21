@@ -1503,13 +1503,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2147059333}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 2147059334}
+        m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
+        m_MethodName: cambiarEscena
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1565,6 +1565,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5b8b540d187374f9edf9a4b1dbc23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escenaJuego: 
+  escenaMenu: 
 --- !u!1 &1973870472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1940,6 +1942,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5b8b540d187374f9edf9a4b1dbc23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escenaJuego: 
+  escenaMenu: 
 --- !u!4 &2147059335
 Transform:
   m_ObjectHideFlags: 0

@@ -6,13 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
 {
+    public string escenaJuego;
+    public string escenaMenu;
+
     public void cambiarMenu()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MenuEscena");
+        UnityEngine.SceneManagement.SceneManager.LoadScene(escenaMenu);
     }
     public void cambiarJuego()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("JuegoEscena");
+        UnityEngine.SceneManagement.SceneManager.LoadScene(escenaJuego);
     }
 
     public void salirDelJuego()
