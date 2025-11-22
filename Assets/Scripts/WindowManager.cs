@@ -10,11 +10,23 @@ public class WindowManager : MonoBehaviour
     public int window_width = 608;
     public int window_height = 1080;
 
+    private int last_width;
+    private int last_height;
+
     private bool is_fullscreen = false;
 
     void Start()
     {
-        Screen.SetResolution(window_width, window_height, false);
+        if (last_width == 0)
+        {
+            last_width = window_width;
+        }
+        if (last_height == 0)
+        {
+            last_height = window_height;
+        }
+
+        Screen.SetResolution(last_width, last_height, is_fullscreen);
     }
 
     void Update()
@@ -35,7 +47,7 @@ public class WindowManager : MonoBehaviour
             else
             {
                 Screen.fullScreenMode = FullScreenMode.Windowed;
-                Screen.SetResolution(window_width, window_height, false);
+                Screen.SetResolution(last_width, last_height, false);
             }
         }
     }
